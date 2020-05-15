@@ -1,0 +1,56 @@
+{
+  "name": "react-training-module-ts",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/react-dom": "^16.9.0",
+    "@types/regression": "^2.0.0",
+    "file-saver": "^2.0.2",
+    "jest-canvas-mock": "^2.2.0",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.1.8",
+    "plotly.js": "^1.52.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-plotly.js": "^2.4.0",
+    "react-plotlyjs-ts": "^2.2.2",
+    "react-scripts": "3.4.1",
+    "regression": "^2.0.1",
+    "svm": "^0.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts --max_old_space_size=4096 start",
+    "build": "react-scripts --max_old_space_size=4096 build",
+    "test": "jest --coverage",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/file-saver": "^2.0.1",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.35",
+    "@types/plotly.js": "^1.50.0",
+    "@types/react": "^16.9.31",
+    "canvas": "^2.6.1",
+    "jest": "^24.9.0",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
+  }
+}

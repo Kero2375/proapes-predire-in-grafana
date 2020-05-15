@@ -1,0 +1,38 @@
+name: SonarCloud
+
+on: 
+  push:
+    branches:
+      - develop
+      - master
+  pull_request:
+      types: [opened, synchronize, reopened]
+
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Run dependencies installation
+      run: npm install
+    - name: Run project build
+      run: npm run build --if-present
+    - name: Run install jest
+      run: npm install --save jest@24.9.0
+    - name: Run tests
+      run: npm test  
+      env:
+        CI: true
+    - name: Fix code coverage paths
+      run: sed -i 's/\/home\/runner\/work\/ModuloEsterno\/ModuloEsterno\//\/github\/workspace\//g' lcov.info
+      working-directory: ./coverage
+    - name: SonarCloud scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

@@ -1,0 +1,17 @@
+{
+    "type": "panel",
+    "name": "Prediction Panel",
+    "id": "prediction-panel",
+    "dataFormats": ["time_series"],
+    "refresh": "5s",
+    "info": {
+        "description": "React Plugin Template Description",
+        "author": {
+            "name": "ProApes",
+            "url": "example.com"
+        }
+    },
+    "dependencies": {
+        "grafanaVersion": "6.x"
+    }
+}
