@@ -1,4 +1,4 @@
-# Modulo interno - Predire in Grafana
+# Modulo interno - Predire in Grafana ![SonarCloud](https://github.com/FiammettaFMC/ModuloInterno/workflows/SonarCloud/badge.svg?branch=master)
 ## Descrizione
 **Prediction Module**: modulo di predizione interno alla piattaforma Grafana.
 - Università degli Studi di Padova
